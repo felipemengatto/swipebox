@@ -67,6 +67,8 @@
 		plugin.init = function() {
 
 			plugin.settings = $.extend( {}, defaults, options );
+			
+			selector = plugin.settings.selector;
 
 			if ( $.isArray( elem ) ) {
 
