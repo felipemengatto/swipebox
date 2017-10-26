@@ -924,7 +924,9 @@
 				$( 'body' ).unbind( 'touchmove' );
 				$( 'body' ).unbind( 'touchend' );
 				$( '#swipebox-slider' ).unbind();
-				$( '#swipebox-overlay' ).remove();
+				$( '#swipebox-overlay' ).delay(150).fadeOut(300, function(){
+					$(this).remove();
+				});
 
 				if ( ! $.isArray( elem ) ) {
 					elem.removeData( '_swipebox' );
